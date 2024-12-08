@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import ChildCareIcon from '@mui/icons-material/ChildCare';
 import { useState } from 'react';
+import { styled } from '@mui/material/styles';
 
 const pages = ['Home', 'Photos', 'Diary'];
 
@@ -29,10 +30,10 @@ function ResponsiveAppBar() {
 
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <ChildCareIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+        <Toolbar>
+          <ChildCareIcon sx={{ display: { xs: 'none', md: 'flex',  color: 'black'}, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -44,11 +45,11 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
-            KKOMI
+            KKOMI Diary
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -98,18 +99,18 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
-            KKOMI
+            KKOMI Diary
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
               </Button>
